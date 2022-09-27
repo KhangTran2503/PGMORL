@@ -1,5 +1,6 @@
 import os, sys, signal
 import random
+from utils import get_n_experiment, get_method
 import numpy as np
 from multiprocessing import Process, Queue, current_process, freeze_support
 import argparse
@@ -26,8 +27,9 @@ test_pgmorl = args.pgmorl
 test_ra = args.ra
 test_random = args.random
 test_moead = args.moead
+start_id = get_n_experiment('./results','Hopper-v3',get_method(args)) + 1
 
-for i in range(args.num_seeds):
+for i in range(start_id,start_id + args.num_seeds):
     seed = random.randint(0, 1000000)
     if test_pgmorl:
         cmd = 'python morl/run.py '\

@@ -32,7 +32,8 @@ def run(args):
     torch.manual_seed(args.seed)
     torch.set_default_dtype(torch.float64)
     torch.set_num_threads(1)
-    device = torch.device("cpu")
+    # fix gpu device
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
     # build a scalarization template
     scalarization_template = WeightedSumScalarization(num_objs = args.obj_num, weights = np.ones(args.obj_num) / args.obj_num)
