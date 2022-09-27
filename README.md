@@ -35,9 +35,7 @@ If you prefer to install all the dependencies by yourself, you could open `envir
 
 The training related code are in the folder `morl`. We provide the scripts in `scrips` folder to run our algorithm/baseline algorithms on each problem described in the paper, and also provide several visualization scripts in `scripts/plot` folder for you to visualize the computed Pareto policies and the training process. 
 
-## Run the Code on Colab (unofficial - KhangTD):
 
-You can follow this file 
 
 
 
@@ -99,7 +97,9 @@ The main entrance of the training code is at  `morl/run.py`. We provide a traini
 
 We run all our experiments on VM instances with 96 Intel Skylake vCPUs and 86.4G memory on Google Cloud Platform without GPU. 
 
+#### Run the Code on Colab (unofficial - KhangTD):
 
+You can follow this file 
 
 ## Acknowledgement
 
