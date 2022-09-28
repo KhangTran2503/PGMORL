@@ -10,7 +10,7 @@ import torch
 import gym
 import numpy as np
 
-os.environ["CUDA_VISIBLE_DEVICES"] = ""
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 class Logger:
     def __init__(self, stream, logfile):
