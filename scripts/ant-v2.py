@@ -31,8 +31,12 @@ test_moead = args.moead
 
 start_id = get_n_experiment('./results','Ant-v2',get_method(args)) + 1
 
-for i in range(start_id,start_id + args.num_seeds):
+for i in range(start_id + args.num_seeds):
+    # if we call file anv-v2.py greater than 1
     seed = random.randint(0, 1000000)
+    if i < start_id:
+        continue
+
     if test_pgmorl:
         cmd = 'python morl/run.py '\
             '--env-name MO-Ant-v2 '\
