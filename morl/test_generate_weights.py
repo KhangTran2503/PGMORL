@@ -15,9 +15,8 @@ generate_weights_batch_dfs(0, obj_num, min_weight, max_weight, delta_weight, [],
 print(weights_batch)
 print(len(weights_batch))
 
-x = [w[0] for w in weights_batch]
-y = [w[1] for w in weights_batch]
-z = [w[2] for w in weights_batch]
+x, y, z = zip(*weights_batch)
+
 
 ax = plt.axes(projection='3d')
 ax.scatter(x, y, z, c=z, cmap='viridis', linewidth=0.5);
